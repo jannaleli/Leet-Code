@@ -45,10 +45,14 @@ func longestDuplicateString(str: String) -> String {
         $0.count > $1.count
     }
     
+    if subStrCollection.first?.count == 1 {
+        return ""
+    }
+    
     return subStrCollection.first ?? ""
     
     
 }
 
-var answ = longestDuplicateString(str: "banabana#")
+var answ = longestDuplicateString(str: "abcd")
 print(answ)
